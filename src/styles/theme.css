@@ -1,0 +1,29 @@
+/* Utthandy brand: teal accent on a dark slate base. */
+:root {
+	--sl-color-accent-low: #063b3b;
+	--sl-color-accent: #0ea5a4;
+	--sl-color-accent-high: #a7f3ef;
+	--sl-color-white: #ffffff;
+	--sl-color-gray-1: #e6edf3;
+	--sl-color-gray-2: #c4cfdb;
+	--sl-color-gray-3: #8b9bb0;
+	--sl-color-gray-4: #4b5a6e;
+	--sl-color-gray-5: #2a3646;
+	--sl-color-gray-6: #18212d;
+	--sl-color-black: #0d131b;
+}
+
+:root[data-theme='light'] {
+	--sl-color-accent-low: #c9f3f1;
+	--sl-color-accent: #0b7d7c;
+	--sl-color-accent-high: #053e3e;
+	--sl-color-white: #0d131b;
+	--sl-color-gray-1: #18212d;
+	--sl-color-gray-2: #2a3646;
+	--sl-color-gray-3: #4b5a6e;
+	--sl-color-gray-4: #8b9bb0;
+	--sl-color-gray-5: #c4cfdb;
+	--sl-color-gray-6: #e6edf3;
+	--sl-color-gray-7: #f4f7fa;
+	--sl-color-black: #ffffff;
+}

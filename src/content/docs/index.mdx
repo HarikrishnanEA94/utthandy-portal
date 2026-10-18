@@ -1,0 +1,46 @@
+---
+title: Utthandy
+description: Free, hands-on cybersecurity training for IT and OT/ICS, from first principles to the SOC floor.
+template: splash
+hero:
+  title: Learn cybersecurity by doing.
+  tagline: Free, hands-on training for IT security, plus OT/ICS security for the systems that run the physical world.
+  image:
+    file: ../../assets/logo.svg
+  actions:
+    - text: Start learning
+      link: /start/
+      icon: right-arrow
+    - text: View on GitHub
+      link: https://github.com/HarikrishnanEA94/utthandy-portal
+      icon: external
+      variant: minimal
+---
+
+import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
+
+:::note[Under construction]
+Utthandy is in its first build phase. The tracks below are being written now, so check back soon.
+:::
+
+## Learning tracks
+
+<CardGrid>
+	<Card title="IT Security" icon="laptop">
+		Foundations, security awareness, networking, Linux and Windows, web app security (OWASP), IAM, cloud, SOC and incident response.
+	</Card>
+	<Card title="OT / ICS Security" icon="setting">
+		PLCs, SCADA and the Purdue model, industrial protocols, IEC 62443, and defending environments where safety comes first.
+	</Card>
+</CardGrid>
+
+## How every module works
+
+<CardGrid stagger>
+	<Card title="Learn" icon="open-book">A short, focused lesson that cites primary sources.</Card>
+	<Card title="Check" icon="approve-check">A quiz with explanations for every answer.</Card>
+	<Card title="Do" icon="rocket">A hands-on challenge you solve in the browser.</Card>
+	<Card title="Recap" icon="document">A cheat sheet to keep.</Card>
+</CardGrid>
+
+<LinkCard title="Ethics first" description="Only practise on systems you own or have written permission to test." href="/legal/" />
