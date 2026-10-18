@@ -1,6 +1,6 @@
 # Utthandy — Cybersecurity Training Portal: Plan
 
-**Domain:** utthandy.com · **Hosting:** GitHub Pages · **Focus:** IT security first (~80%), OT/ICS security second (~20%)
+**Site:** harikrishnanea94.github.io/utthandy-portal (utthandy.com redirects here) · **Hosting:** GitHub Pages · **Focus:** IT security first (~80%), OT/ICS security second (~20%)
 
 ---
 
@@ -29,15 +29,17 @@ Alternatives I looked at and didn't pick: Jekyll (GitHub's native option, but it
 
 ## 3. Domain and GitHub Pages setup
 
-1. Create a GitHub repo, e.g. `utthandy-portal` (or `<username>.github.io`).
-2. Add `public/CNAME` containing `utthandy.com`.
-3. At your domain registrar, set these DNS records:
-   - `A` @ → `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
-   - `AAAA` @ → `2606:50c0:8000::153`, `2606:50c0:8001::153`, `2606:50c0:8002::153`, `2606:50c0:8003::153`
-   - `CNAME` www → `<username>.github.io`
-4. Repo Settings → Pages → Source: **GitHub Actions**; custom domain `utthandy.com`; tick **Enforce HTTPS** once the certificate is issued (this can take up to 24h).
-5. **Verify the domain** under GitHub account Settings → Pages. This stops anyone else from claiming utthandy.com subdomains on GitHub (domain takeover).
-6. Optional: add email records later (SPF/DMARC). Even if you won't send mail from the domain, a `v=spf1 -all` record stops spoofing.
+The site lives at **https://harikrishnanea94.github.io/utthandy-portal/**. utthandy.com is only a redirect to that address. There's no custom domain on GitHub Pages and no `CNAME` file.
+
+1. Repo `HarikrishnanEA94/utthandy-portal`; Settings → Pages → Source: **GitHub Actions** (HTTPS is automatic on github.io).
+2. `astro.config.mjs` sets `site: 'https://harikrishnanea94.github.io'` and `base: '/utthandy-portal'`. In-content links must be relative (e.g. `start/`) or include the base.
+3. At your domain registrar, turn on **domain forwarding**:
+   - `utthandy.com` and `www.utthandy.com` → `https://harikrishnanea94.github.io/utthandy-portal/`
+   - Type **301 (permanent)**, **without masking/framing**
+   - Enable HTTPS on the forward if the registrar offers it, so `https://utthandy.com` also redirects
+4. Optional: add email records later (SPF/DMARC). Even if you won't send mail from the domain, a `v=spf1 -all` record stops spoofing.
+
+If you later want utthandy.com to be the real address, add `public/CNAME`, set the Pages custom domain, point the A/AAAA records at GitHub, and remove `base`.
 
 ## 4. Site structure
 
@@ -126,10 +128,10 @@ utthandy-portal/
 ## 8. Phased roadmap
 
 ### Phase 0: Setup (day 1)
-- [ ] `git init`, scaffold Astro + Starlight, set up branding (name, logo, colors)
-- [ ] Create the GitHub repo, add the deploy workflow and the CNAME file
-- [ ] Configure DNS, verify the domain, enforce HTTPS
-- [ ] Ship a "Coming soon" landing page live at utthandy.com
+- [x] `git init`, scaffold Astro + Starlight, set up branding (name, logo, colors)
+- [x] Create the GitHub repo and add the deploy workflow
+- [ ] Set up a 301 redirect from utthandy.com to the github.io site at the registrar
+- [x] Ship a "Coming soon" landing page on GitHub Pages
 
 ### Phase 1: MVP (weeks 1–3)
 - [ ] Landing page, track catalog, about/legal pages

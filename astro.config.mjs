@@ -4,7 +4,8 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://utthandy.com',
+	site: 'https://harikrishnanea94.github.io',
+	base: '/utthandy-portal',
 	integrations: [
 		starlight({
 			title: 'Utthandy',

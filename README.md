@@ -1,6 +1,6 @@
 # Utthandy: cybersecurity training portal
 
-Source code for [utthandy.com](https://utthandy.com), a free, hands-on cybersecurity training site. It focuses mainly on IT security and also covers OT/ICS. The site is built with [Astro Starlight](https://starlight.astro.build) and deployed to GitHub Pages.
+Source code for [Utthandy](https://harikrishnanea94.github.io/utthandy-portal/), a free, hands-on cybersecurity training site. It focuses mainly on IT security and also covers OT/ICS. The site is built with [Astro Starlight](https://starlight.astro.build) and deployed to GitHub Pages.
 
 See [PLAN.md](PLAN.md) for the curriculum and roadmap.
 
@@ -23,4 +23,4 @@ The sidebar is generated automatically from these folders.
 
 ## Deploy
 
-Every push to `main` builds and publishes the site through `.github/workflows/deploy.yml`. `public/CNAME` sets the custom domain.
+Every push to `main` builds and publishes the site to https://harikrishnanea94.github.io/utthandy-portal/ through `.github/workflows/deploy.yml`. utthandy.com forwards there with a registrar redirect. Because the site is served under `/utthandy-portal/`, in-content links must be relative.
